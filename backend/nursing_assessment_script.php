@@ -59,7 +59,8 @@
         $designation = $_POST['designation'];
         $signature = $_POST['signature'];
 
-//sql im
+        //sql injection security
+        $name = mysqli_real_escape_string($con,$name)
 
          //sql insert query
 
