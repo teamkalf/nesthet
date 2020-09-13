@@ -1,0 +1,61 @@
+.btn,
+.home
+{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    display: inline-block;
+    border-radius: 10rem;
+    color: $primary_color;
+    font-size: $default-font-size;
+    font-weight: 400;
+    background-color: $secondary_color_light;
+    
+
+    // change for the <Button> element
+    border: none;
+    cursor: pointer;
+
+}
+
+//submit button style
+
+.button_container{
+    padding: 2rem 0;
+
+    .submit_btn{
+        background-color: rgba($text_color, .5);
+        border-radius: 30px;
+        padding: .9rem 2rem;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        cursor: pointer;
+        border: none;
+        color: $secondary_text-color;
+
+        &:hover{
+            background-color: $primary_text-color;
+            transform: all 1s;
+            color: $primary_color;
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($tertiary_text-color, .3);
+        }
+
+    }
+
+    .adjust_btn{
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $primary_text-color;
+        
+        &:hover{
+            background-color: $primary_text-color;
+            color: $primary_color;
+        }
+    }
+}

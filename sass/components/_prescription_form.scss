@@ -1,0 +1,65 @@
+.prescription{
+
+    &_header{
+        text-transform: uppercase;
+        font-family: serif;
+        text-align: center;
+        color: $secondary_text-color;
+    }
+
+    .form{
+        text-transform: uppercase;
+
+        &_group:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        &_input{
+            font-size: 1rem;
+            font-family: inherit;
+            color: $secondary_text-color;
+            padding: .5rem .2rem;
+            border-radius: 5px;
+            background-color: rgba($primary_color, .5);
+            border: none;
+            border-bottom: 4px solid transparent;
+            width: 15rem;
+            transition: all .2s;
+
+            &:focus{
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($tertiary_text-color, .3);
+                border-bottom: 4px solid $secondary_color_dark;
+            }
+    
+            &:focus:invalid{
+                border-bottom: 4px solid $tertiary;
+            }
+    
+            &::-webkit-input-placeholder{
+                color: $text_color;
+            }
+        }
+
+        &_label{
+            padding: 1rem;
+            text-transform: uppercase;
+            color: $secondary_text-color;
+        }
+    }
+    
+    .textarea_con{
+        display: block;
+
+        &_label{
+            margin-right: 2rem;
+            color: $secondary_text-color;
+            text-transform: uppercase;
+        }
+
+        &_input{
+            width: 30rem;
+            font-size: 1rem;
+        }
+    }
+}

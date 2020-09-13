@@ -1,0 +1,120 @@
+.registration__container{
+
+    .registration__header{
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: .5rem;
+        color: $tertiary_text-color;
+    }
+
+   .personal__data{
+       padding: 1rem;
+
+       &--tittle{
+           color: $secondary_text-color;
+       }
+   }
+
+    .form{
+
+        &_group:not(:last-child){
+            margin-bottom: 1rem;
+            
+        }
+    
+        &_input{
+            font-size: 1rem;
+            font-family: inherit;
+            color: $secondary_text-color;
+            padding: .5rem 1rem;
+            border-radius: 5px;
+            background-color: rgba($primary_color, .5);
+            border: none;
+            border-bottom: 4px solid transparent;
+            width: 15rem;
+            transition: all .2s;
+    
+            &:focus{
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($tertiary_text-color, .3);
+                border-bottom: 4px solid $secondary_color_dark;
+            }
+    
+            &:focus:invalid{
+                border-bottom: 4px solid $tertiary;
+            }
+    
+            &::-webkit-input-placeholder{
+                color: $text_color;
+            }
+        }
+        
+    
+        &_label{
+        font-size: 1rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        padding-left: .1rem;
+        margin-top: .7rem;
+        transition: all 1s;
+        color: $secondary_text-color;
+        }
+    
+        &_label  + &_input:placeholder-shown{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-1rem);
+        }
+    }
+
+    .section__contact{
+
+        &--tittle{
+            color: $secondary_text-color;
+            text-transform: capitalize;
+        }
+        
+        .history{
+
+            
+            .textarea{
+            
+                &_flex{
+                    display: block;
+                }
+    
+                &_adjust{
+                    width: 29rem;
+                    margin-left: 2rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .section__complete{
+        &--tittle{
+            color: $secondary_text-color;
+        }
+    }
+}
+
+@media(max-width:990px){
+    .registration{
+
+        .section__contact{
+            
+            &--tittle{
+                text-align: center;
+            }
+        }
+
+        .section__complete{
+
+            &--tittle{
+                text-align: center;
+            }
+        }
+    }
+    
+}

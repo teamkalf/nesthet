@@ -1,0 +1,195 @@
+.nursing{
+
+    &__header{
+        text-transform: uppercase;
+        font-family: serif;
+        text-align: center;
+        color: $secondary_text-color;
+    }
+
+    .personal__data--tittle{
+        text-transform: uppercase;
+    }
+
+    .form{
+        text-transform: uppercase;
+
+        &_group:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        &_input{
+            font-size: 1rem;
+            font-family: inherit;
+            color: $secondary_text-color;
+            padding: .5rem ;
+            border-radius: 5px;
+            background-color: rgba($primary_color, .5);
+            border: none;
+            border-bottom: 4px solid transparent;
+            width: 15rem;
+            transition: all .2s;
+
+            &:focus{
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($tertiary_text-color, .3);
+                border-bottom: 4px solid $secondary_color_dark;
+            }
+    
+            &:focus:invalid{
+                border-bottom: 4px solid $tertiary;
+            }
+    
+            &::-webkit-input-placeholder{
+                color: $text_color;
+            }
+        }
+
+        &_label{
+            padding: 1rem;
+            text-transform: uppercase;
+            color: $secondary_text-color;
+        }
+        
+        .textarea{
+            width: 45%;
+            font-size: 1rem;
+        }
+
+        .vital_margin-top{
+            margin-top: .5rem;
+        }  
+
+        .exam_type{
+
+            &-sub{padding-bottom: 1rem;}
+            
+            &--label{
+                padding: 1rem;
+                color: $secondary_text-color;
+            }
+        }
+
+        .edema{
+            display: flex;
+            padding-top: 1rem;
+
+            &_sub{
+                margin-left: .5rem;
+                text-align: center;
+            }
+        }
+
+        //styles for complain textarea
+
+        .complain{
+           
+
+            &_label{
+                color: $secondary_text-color;
+            }
+
+            &_textarea{
+                
+                font-size: 1rem;
+            }
+        }
+
+        .system{
+            margin: 2rem 0;
+            align-items: center;
+
+            &__label{
+                color: $secondary_text-color;
+            }
+            
+
+            &__textarea{
+                width: 40%;
+                font-size: 1rem;
+            }
+
+            &__container{
+                padding: 1rem 0;
+                
+                &--detail{
+                    padding-bottom: 1rem;
+                    font-size: 1rem;
+                    
+                }
+            }
+        }
+        .urine_test{
+            color: $secondary_text-color;
+            &_container{
+                display: flex;
+                margin-top: 1rem;
+            }
+            &_lue{
+                display: flex;
+                padding: 0 1rem;
+
+                &-main{
+                    display: flex;
+                    margin-left: .5rem;
+                }
+
+                &-sub{
+                    padding: 0 .5rem;
+                }
+            }
+        }
+    }
+    
+}
+
+//smaller and medium devices
+
+@media(max-width:990px){
+    .nursing__header{
+        font-size: 1.5rem;
+    }
+
+    .personal__data--tittle{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .form{
+        &_label{
+            display: block;
+            text-align: center;
+        }
+
+        &_input{
+            display: block;
+            margin: 0 auto;
+        }
+        .complain{
+
+            &_textarea{
+                
+                width: 100%;
+            }
+        }
+
+        .exam_type{
+        text-align: center;
+        }
+
+        .system{
+        text-align: center;
+        }
+
+        .urinalysis_test{
+            text-align: center;
+
+            .urine_test{
+                &_lue{
+                    padding: .5rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

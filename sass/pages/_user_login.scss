@@ -1,0 +1,26 @@
+
+.login{
+    padding: 5rem 0;
+    background-color: $primary_text-color;
+}
+
+.login_container{
+    background-color: rgba($primary_color, .5);
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 0 1.5rem  5rem rgba($tertiary_text-color, .5);
+    padding: 0 2rem;
+    margin: auto ;
+    width: 70%;
+}
+
+.header{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form{
+    text-align: center;
+}
+
+
