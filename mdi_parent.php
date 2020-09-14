@@ -1,4 +1,6 @@
-
+<?php
+  session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +15,7 @@
     <div class="row">
       <div class="mdi__parent--main">
         <div class="mdi__parent__sub">
-          <a href="index.php" class="home_mini">Close</a>
+          <a href="logout.php" class="home_mini">Logout</a>
 
         <div class="u-margin-bottom-medium">
           <h2 class="heading_secondary u-margin-bottom-small">

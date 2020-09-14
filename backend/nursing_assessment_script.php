@@ -60,7 +60,7 @@
         $signature = $_POST['signature'];
 
         //sql injection security
-        $name = mysqli_real_escape_string($con,$name)
+        $name = mysqli_real_escape_string($con,$name);
 
          //sql insert query
 

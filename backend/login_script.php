@@ -20,6 +20,8 @@
             
         if($role['role'] == "admin"){
            
+            session_start();
+            
             $_SESSION['user'] = $user;
             header('location: admin.php');
         }
