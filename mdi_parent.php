@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include "./backend/security.php";
 ?>
 
 <!DOCTYPE html>

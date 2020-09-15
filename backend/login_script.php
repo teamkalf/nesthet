@@ -10,7 +10,7 @@
         $user = mysqli_real_escape_string($con,$user);
         $password = mysqli_real_escape_string($con,$password);
 
-        //user redirection!
+        //select database
 
         $db = mysqli_select_db($con,'nesthet');
 
@@ -18,10 +18,11 @@
         $query_run = mysqli_query($con,$query);
         $role = mysqli_fetch_array($query_run);
             
+        //user redirection base on user role
+
         if($role['role'] == "admin"){
            
             session_start();
-            
             $_SESSION['user'] = $user;
             header('location: admin.php');
         }

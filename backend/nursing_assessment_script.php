@@ -13,11 +13,11 @@
         $current_complain = $_POST['current_complain'];
 
         // vital
-        $blood_pressure = $_POST['bp'];
-        $temp = $_POST['temp'];
-        $pr = $_POST['pr'];
-        $rr = $_POST['rr'];
-        $sat_02 = $_POST['02_sat'];
+        $blood_pressure = $_POST['blood_pressure'];
+        $temperature = $_POST['temperature'];
+        $heart_rate = $_POST['heart_rate'];
+        $respiratory_rate = $_POST['respiratory_rate'];
+        $oxygen_saturation = $_POST['oxygen_saturation'];
 
         // examination
         $illness = $_POST['illness'];

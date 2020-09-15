@@ -1,10 +1,9 @@
 <?php
+    
+    //direct URL access prevention
 
-    session_start();
-
-    if(!$_SESSION['user'])
-    {
+    if(!isset($_SESSION['user']))
         header ('location:user_login.php');
-    }
+    
 
 ?>

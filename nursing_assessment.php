@@ -85,31 +85,31 @@
 
                         <div class="form_group">
 
-                            <label for="bp" class="form_label">BP</label>
+                            <label for="blood_pressure" class="form_label">blood pressure</label>
 
-                            <input type="text" class="form_input" id="bp" placeholder="bp" name="bp"  required>
+                            <input type="text" class="form_input" id="blood_pressure" placeholder="blood pressure" name="blood_pressure"  required>
                   
-                            <label for="tem" class="form_label">TEMP</label>
+                            <label for="temperature" class="form_label">temperature</label>
 
-                            <input type="text" class="form_input" id="tem" placeholder="tem" name="temp"  required>
+                            <input type="text" class="form_input" id="temperature" placeholder="temperature" name="temp"  required>
                         </div>
 
                         <div class="form_group">
 
-                            <label for="pr" class="form_label">PR</label>
+                            <label for="heart_rate" class="form_label">heart rate</label>
 
-                            <input type="text" class="form_input" id="pr" placeholder="pr" name="pr"  required>
+                            <input type="text" class="form_input" id="heart_rate" placeholder="heart rate" name="heart_rate"  required>
                         </div>
 
                         <div class="form_group">
 
-                            <label for="rr" class="form_label">RR</label>
+                            <label for="respiratory_rate" class="form_label">respiratory rate</label>
 
-                            <input type="text" class="form_input" id="rr" placeholder="rr" name="rr"  required>
+                            <input type="text" class="form_input" id="respiratory_rate" placeholder="respiratory rate" name="respiratory_rate"  required>
 
-                            <label for="02 sat" class="form_label">02 SAT</label>
+                            <label for="oxygen_saturation" class="form_label">oxygen saturation</label>
 
-                            <input type="text" class="form_input" id="02 sat" placeholder="02 sat" name="02_sat"  required>
+                            <input type="text" class="form_input" id="oxygen_saturation" placeholder="oxygen saturation" name="oxygen_saturation" required>
                         </div>
 
                         <div class="personal__data--tittle">
