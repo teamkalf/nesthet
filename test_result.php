@@ -17,7 +17,7 @@
                 </h1>
             </div>
 
-            <form action="#" class="form">
+            <form action="" method="post"  enctype="multipart/form-data" class="form">
                 <div class="form_section_personal-detail">
                     <div class="form_section-tittle">
                         <h3 class="u-margin-bottom-small">
@@ -31,9 +31,6 @@
             
                         <label for="phone" class="form_label">Telephone</label>
                         <input type="text" class="form_input" id="phone" placeholder="phone"   required>
-            
-                        <label for="registration#" class="form_label">Registration No.</label>
-                        <input type="text" class="form_input" id="registration#" placeholder="registration#"   required>
                     </div>
                 </div>
 
@@ -45,22 +42,22 @@
                     </div>
 
                     <div class="form_group">
-                        <label for="bp" class="form_label">BP</label>
-                        <input type="text" class="form_input " id="bp" placeholder="bp"   required>
+                        <label for="blood pressure" class="form_label">blood pressure</label>
+                        <input type="text" class="form_input "name="blood_pressure"  id="blood pressure" placeholder="blood pressure"   required>
               
-                        <label for="tem" class="form_label">TEMP</label>
-                        <input type="text" class="form_input " id="tem" placeholder="tem"   required>
+                        <label for="temperature" class="form_label">temperature</label>
+                        <input type="text" class="form_input " id="temperature" placeholder="temperature"   required>
 
-                        <label for="pr" class="form_label">PR</label>
-                        <input type="text" class="form_input" id="pr" placeholder="pr"   required>
+                        <label for="heart rate" class="form_label">hear rate</label>
+                        <input type="text" class="form_input" name="heart_rate" id="heart rate" placeholder="heart rate"   required>
                     </div>
 
                     <div class="form_group">
-                        <label for="rr" class="form_label">RR</label>
-                        <input type="text" class="form_input" id="rr" placeholder="rr"   required>
+                        <label for="respiratory rate" class="form_label">respiratory rate</label>
+                        <input type="text" class="form_input" name="respiratory_rate" id="respiratory rate" placeholder="respiratory rate"   required>
 
-                        <label for="02 sat" class="form_label">02 SAT</label>
-                        <input type="text" class="form_input" id="02 sat" placeholder="02 sat"   required>
+                        <label for="oxygen saturation" class="form_label">oxygen saturation</label>
+                        <input type="text" class="form_input" name="oxygen_saturation" id="oxygen saturation" placeholder="oxygen saturation"   required>
                     </div>
                 </div>
 
@@ -76,31 +73,31 @@
                             <label for="general" class="exam_type--label">general condition:</label>
 
                             <label  class="form_label" for="acutely" class="exam_type--label">acutely ill:</label>
-                            <input type="radio" class="checkbox" name="illness">
+                            <input type="radio" class="general_condition" value="Acutely ill" name="illness">
 
                             <label class="form_label" for="chronically" class="exam_type--label">chronically ill:</label>
-                            <input type="radio" class="checkbox" name="illness">
+                            <input type="radio" class="general_condition" value="Chronically ill" name="illness">
 
                             <label class="form_label" for="normal" class="exam_type--label">Normal:</label>
-                            <input type="radio" class="checkbox" name="illness">
+                            <input type="radio" class="general_condition" value="Normal" name="illness">
                         </div>
                     </div>
 
                     <div class="form_optional_disease">
                         <label class="form_label" for="pale" class="exam_type--label">pale:</label>
-                        <input type="checkbox" class="checkbox" id="pale">
+                        <input type="checkbox" class="checkbox" name="multi_option_disease[]" id="pale">
 
                         <label class="form_label" for="cyanosis" class="exam_type--label">cyanosis:</label>
-                        <input type="checkbox" class="checkbox" id="cyanosis">
+                        <input type="checkbox" class="checkbox" name="multi_option_disease[]" id="cyanosis">
 
                         <label class="form_label" for="dehydration" class="exam_type--label">dehydration:</label>
-                        <input type="checkbox" class="checkbox" id="dehydration">
+
+                        <input type="checkbox" class="checkbox" name="multi_option_disease[]" id="dehydration">
                     </div>
 
                     <div class="form_jaundice_main">
                         <div>
                             <label for="jaundice" class="exam_type-label">Jaundice:</label>
-                            <input type="checkbox">
                         </div>
                         
                         <div class="form_jaundice_sub">
@@ -108,7 +105,7 @@
                                 <label class="exam_type-label" >+</label> 
                             </div>
                             <div>
-                                <input type="radio" name="jaundice_+">
+                                <input type="radio" name="jaundice_+" value="jaundice +">
                             </div>
                         </div>
 
@@ -117,7 +114,7 @@
                                 <label class="exam_type-label">++</label> 
                             </div>
                             <div>
-                                <input type="radio" name="jaundice_+">
+                                <input type="radio" name="jaundice_+" value="jaundice ++">
                             </div>
                         </div>
 
@@ -126,7 +123,7 @@
                                 <label class="exam_type-label">+++</label> 
                             </div>
                             <div>
-                                <input type="radio" name="jaundice_+">
+                                <input type="radio" name="jaundice_+" value="jaundice +++">
                             </div>
                         </div>
                     </div>
@@ -142,7 +139,7 @@
                                     <label class="exam_type-label" for="pedal">PEDAL</label> 
                                 </div>
                                 <div>
-                                    <input type="radio" name="rad_check">
+                                    <input type="radio" name="edema" value="Pedal">
                                 </div>
                             </div>
                             
@@ -151,7 +148,7 @@
                                     <label class="exam_type-label" for="pedal">generalized</label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="rad_check">
+                                    <input type="radio" name="edema" value="Generalize">
                                 </div>
                             </div>
                         </div>
@@ -191,9 +188,11 @@
                         </div>
                 </div>
         
-                <div class="form_section_investigation">
-                    <h1>scanning</h1>
-                    <h1>x-ray goes here</h1>
+                <div class="form_section_investigation u-margin-top-small">
+                    <label for="tittle" class="form_label">image tittle</label>
+                    <input type="text" class="form_input" name="tittle" id="tittle">
+
+                    <input type="file" class="form_input" name="image">
                 </div>
 
                 <div class="form_section_other">
