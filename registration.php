@@ -2,7 +2,7 @@
 
   include "./backend/server-connection.php";
   include "./backend/registration_script.php";
-
+  include "./backend/security.php";
 ?>
 
 <!DOCTYPE html>

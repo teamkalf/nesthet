@@ -8,6 +8,9 @@
     <title>admin_panel</title>
 </head>
 <body>
+    <?php
+        include "./backend/security.php";
+    ?>
     <h1>ADMIN PANEL</h1>
 </body>
 </html>

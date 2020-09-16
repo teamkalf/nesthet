@@ -2,7 +2,7 @@
 
     include "./backend/server-connection.php";
     include "./backend/referral_script.php";
-
+    include "./backend/security.php";
 ?>
 
 <!DOCTYPE html>

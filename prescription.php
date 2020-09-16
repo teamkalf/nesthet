@@ -2,6 +2,7 @@
 
     include "./backend/server-connection.php";
     include "./backend/prescription_script.php";
+    include "./backend/security.php";
 
 ?>
 

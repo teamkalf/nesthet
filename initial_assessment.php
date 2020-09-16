@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="/sass/main.css">
 </head>
 <body>
+    <?php
+        include "./backend/security.php";
+    ?>    
+
+
     <div class="assessment-main">
         <div class="assessment">
             <div class="assessment_header">

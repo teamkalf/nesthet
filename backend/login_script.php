@@ -1,5 +1,7 @@
 <?php
     
+    session_start();
+    
 
     if (isset($_POST['btnLogin']))
     {
@@ -22,12 +24,11 @@
 
         if($role['role'] == "admin"){
            
-            session_start();
             $_SESSION['user'] = $user;
             header('location: admin.php');
         }
         else if($role['role'] == "user") {
-            
+
             $_SESSION['user'] = $user;
             header('location: mdi_parent.php');
         }

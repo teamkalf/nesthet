@@ -1,6 +1,7 @@
 <?php
     include "./backend/server-connection.php";
     include "./backend/nursing_assessment_script.php";
+    include "./backend/security.php";
 ?>
 
 <!DOCTYPE html>
