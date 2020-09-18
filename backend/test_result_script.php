@@ -42,6 +42,47 @@
 
         $image_tittle = $_POST['image_tittle'];
         
+        //image insertion
+        $picture_name = random(1000,10000)."-".$_FILES["image"]["name"];
+        $temporary_name = $_FILES["files"]["tmp_name"];
+        $upload_directory ='./uploaded_files';
+        move_uploaded_file($temporary_name, $upload_directory.'/'.$picture_name);
+
+        // tests and test results
+        $first_test = $_POST['first_test'];
+        $f_test_result = $_POST['f_test_result'];
+        $second_test = $_POST['second_test'];
+        $s_test_result = $_POST['s_test_result'];
+        $third_test = $_POST['third_test'];
+        $t_test_result = $_POST['t_test_result'];
+
+        //sql injection security
+
+        $name = mysqli_real_escape_string($con , $name);
+        $telephone = mysqli_real_escape_string($con , $telephone);
+        $blood_pressure = mysqli_real_escape_string($con , $blood_pressure);
+        $temperature = mysqli_real_escape_string($con , $temperature);
+        $heart_rate = mysqli_real_escape_string($con , $heart_rate);
+        $respiratory_rate = mysqli_real_escape_string($con , $respiratory_rate);
+        $oxygen_saturation = mysqli_real_escape_string($con , $oxygen_saturation);
+        $random_blood_sugar = mysqli_real_escape_string($con , $random_blood_sugar);
+        $fast_blood_sugar = mysqli_real_escape_string($con , $fast_blood_sugar);
+        $hemoglobin = mysqli_real_escape_string($con , $hemoglobin);
+        $blood_group = mysqli_real_escape_string($con , $blood_group);
+        $rapid_diagnosis_test = mysqli_real_escape_string($con , $rapid_diagnosis_test);
+        $white_blood_cell = mysqli_real_escape_string($con , $white_blood_cell);
+        $image_tittle = mysqli_real_escape_string($con , $image_tittle);
+        $first_test = mysqli_real_escape_string($con , $first_test);
+        $f_test_result = mysqli_real_escape_string($con , $f_test_result);
+        $second_test = mysqli_real_escape_string($con , $second_test);
+        $s_test_result = mysqli_real_escape_string($con , $s_test_result);
+        $third_test = mysqli_real_escape_string($con , $third_test);
+        $t_test_result = mysqli_real_escape_string($con , $t_test_result);
+
+        //mysql insert query
+
+        
+
 
     }
 
