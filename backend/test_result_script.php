@@ -81,7 +81,18 @@
 
         //mysql insert query
 
-        
+        $insert_query = ("INSERT into tbl_test_result (name , telephone , blood_pressure , temperature , heart_rate , respiratory_rate , oxygen_saturation , general_condition , optional_disease , jaundice , edema , random_blood_sugar, fast_blood_sugar , hemoglobin , blood_group , rapid_diagnosis_test , white_blood_cell , image_tittle , image , first_test , f_test_result , second_test , s_test_result ,third_test , t_test_result) values ('$name' , '$telephone' , '$blood_pressure' , '$temperature' , '$heart_rate' , '$respiratory_rate' , '$oxygen_saturation' , '$general_condition' , '$optional_disease' , '$jaundice' , '$edema' , '$random_blood_sugar' , '$fast_blood_sugar' , '$hemoglobin' , '$blood_group' , '$rapid_diagnosis_test' , '$white_blood_cell' , '$image_tittle' , '$picture_name' , '$first_test' , '$f_test_result' , '$second_test' , '$s_test_result' , '$third_test' , '$t_test_result')");
+
+        //run sql query
+
+        if(mysqli_query($con , $insert_query))
+        {
+            echo "<script> alert ('Record inserted Successfully') </script>";
+        }
+        else
+         {
+            echo "<script> alert ('Record Failed to inserted please try again') </script>";
+         }
 
 
     }
