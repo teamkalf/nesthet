@@ -1,4 +1,7 @@
-
+<?php
+    include "./backend/test_result_script.php";
+    include "./backend/security.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
