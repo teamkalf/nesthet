@@ -31,10 +31,10 @@
 
                     <div class="form_group">
                         <label for="name" class="form_label">Name</label>
-                        <input type="text" class="form_input" id="name" placeholder="name"   required>
+                        <input type="text" class="form_input" id="name" name="name" placeholder="name"   required>
             
                         <label for="phone" class="form_label">Telephone</label>
-                        <input type="text" class="form_input" id="phone" placeholder="phone"   required>
+                        <input type="text" class="form_input" id="phone" name="telephone" placeholder="phone"   required>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@
                         <label for="temperature" class="form_label">temperature</label>
                         <input type="text" class="form_input " id="temperature" placeholder="temperature"   required>
 
-                        <label for="heart rate" class="form_label">hear rate</label>
+                        <label for="heart rate" class="form_label">heart rate</label>
                         <input type="text" class="form_input" name="heart_rate" id="heart rate" placeholder="heart rate"   required>
                     </div>
 
@@ -135,7 +135,6 @@
                         <div class="edema">
                             <div>
                                 <label for="edema" class="exam_type-label">edema:</label>
-                                <input type="checkbox">
                             </div>
 
                             <div class="edema_sub">
@@ -167,34 +166,34 @@
                     <div class="form">
                         
                         <div class="form_group">
-                            <label for="rbs" class="form_label">rbs</label>
+                            <label for="random blood sugar" class="form_label">random blood sugar</label>
     
-                            <input type="text" class="form_input" id="rbs" placeholder="rbs"   required>
+                            <input type="text" class="form_input" name="random_blood_sugar" id="random blood sugar" placeholder="random blood sugar"   required>
                 
-                            <label for="fbs" class="form_label">fbs</label>
+                            <label for="fast blood sugar" class="form_label">fast blood sugar</label>
     
-                            <input type="text" class="form_input" id="fbs" placeholder="fbs"   required>
+                            <input type="text" class="form_input" id="fast blood sugar" name="fast_blood_sugar" placeholder="fast blood sugar"   required>
     
-                            <label for="hb" class="form_label">hb</label>
+                            <label for="hemoglobin" class="form_label">hemoglobin</label>
     
-                            <input type="text" class="form_input" id="hb" placeholder="hb"   required>
+                            <input type="text" class="form_input" id="hemoglobin" name="hemoglobin" placeholder="hemoglobin"   required>
                         </div>
                         
                         <div>
-                            <label for="b.group" class="form_label">b.group</label>
-                            <input type="text" class="form_input" id="b.group" placeholder="b.group"   required>
+                            <label for="blood group" class="form_label">blood group</label>
+                            <input type="text" class="form_input" id="blood group" name="blood_group" placeholder="blood group"   required>
     
-                            <label for="rdt" class="form_label">rdt</label>
-                            <input type="text" class="form_input" id="rdt" placeholder="rdt"   required>
+                            <label for="rapid diagnosis test" class="form_label">rapid diagnosis test</label>
+                            <input type="text" class="form_input" id="rapid diagnosis test" name="rapid_diagnosis_test" placeholder="rapid diagnosis test"   required>
     
-                            <label for="wbc" class="form_label">wbc</label>
-                            <input type="text" class="form_input" id="wbc" placeholder="wbc"   required>
+                            <label for="white blood cell" class="form_label"> grouping & white blood cell count</label>
+                            <input type="text" class="form_input" id="white blood cell" name="white_blood_cell" placeholder="grouping & white blood cell count"   required>
                         </div>
                 </div>
         
                 <div class="form_section_investigation u-margin-top-small">
                     <label for="tittle" class="form_label">image tittle</label>
-                    <input type="text" class="form_input" name="tittle" id="tittle">
+                    <input type="text" class="form_input" name="image_tittle" id="tittle">
 
                     <input type="file" class="form_input" name="image">
                 </div>
@@ -209,43 +208,43 @@
                     <div class="form">
                         <div>
                             <div class="form_group">
-                                <label for="test name" class="form_label">test name</label>
+                                <label for="first test" class="form_label">first test</label>
 
-                                <input class="form_input form_adjust" id="test name" type="text" placeholder="enter test name " required>
+                                <input class="form_input form_adjust" id="first test"  name="first_test" type="text" placeholder="enter first test " required>
     
-                                <label for="test result" class="form_label">test result</label>
+                                <label for="first test result" class="form_label">first test result</label>
 
-                                <input class="form_input form_adjust" id="test result" type="text" placeholder="enter test result" required>
+                                <input class="form_input form_adjust" id="first test result" name="f_test_result" type="text" placeholder="enter first test result" required>
                             </div>
                         </div>
                         
                         <div>
                             <div class="form_group">
-                                <label for="test name2" class="form_label">test name</label>
+                                <label for="second test" class="form_label">second test</label>
 
-                                <input class="form_input form_adjust" id="test name2" type="text" placeholder="enter test name " required>
+                                <input class="form_input form_adjust" id="second test" name="second_test" type="text" placeholder="enter second test " required>
     
-                                <label for="test result2" class="form_label">test result</label>
+                                <label for="second test result" class="form_label">second test result</label>
 
-                                <input class="form_input form_adjust" id="test result2" type="text" placeholder="enter test result" required>
+                                <input class="form_input form_adjust" id="second test result" name="s_test_result" type="text" placeholder="enter second test result" required>
                             </div>
                         </div>
 
                         <div>
                             <div class="form_group">
-                                <label for="test name3" class="form_label">test name</label>
+                                <label for="third test" class="form_label">third test</label>
 
-                                <input class="form_input form_adjust" id="test name3" type="text" placeholder="enter test name " required>
+                                <input class="form_input form_adjust" id="third test" name="third_test" type="text" placeholder="enter third test " required>
     
-                                <label for="test result3" class="form_label">test result</label>
-                                <input class="form_input form_adjust" id="test result3" type="text" placeholder="enter test result" required>
+                                <label for="third test result" class="form_label">third test result</label>
+                                <input class="form_input form_adjust" id="third test result" name="t_test_result" type="text" placeholder="enter third test result" required>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="button_container">
-                    <button class="submit_btn">Save Record</button>
-                  </div>
+                        <input type="submit" name="insert" value="enter record" class="submit_btn">
+                    </div>
             </form>
         </div>
     </div>

@@ -337,33 +337,33 @@
                             
                             <div class="form_group">
                                 <div>
-                                    <label for="rbs" class="form_label">rbs</label>
-                                    <input type="text" class="form_input" id="rbs" name="rbs" placeholder="rbs"   required>
+                                    <label for="random blood sugar" class="form_label">random blood sugar</label>
+                                    <input type="text" class="form_input" id="random blood sugar" name="random_blood_sugar" placeholder="random blood sugar"   required>
 
-                                    <label for="fbs" class="form_label">fbs</label>
-                                    <input type="text" class="form_input" id="fbs" name="fbs" placeholder="fbs"   required>
+                                    <label for="fast blood sugar" class="form_label">fast blood sugar</label>
+                                    <input type="text" class="form_input" id="fast blood sugar" name="fast_blood_sugar" placeholder="fast blood sugar"   required>
                                 </div>
                             </div>
 
                             <div class="form_group">
-                                <label for="hb" class="form_label">hb</label>
+                                <label for="hemoglobin" class="form_label">hemoglobin</label>
 
-                                <input type="text" class="form_input" id="hb" name="hb" placeholder="hb"   required>
+                                <input type="text" class="form_input" id="hemoglobin" name="hemoglobin" placeholder="hemoglobin"   required>
                              </div>
                             
                             <div class="form_group">
                                 <div>
-                                    <label for="b.group" class="form_label">b.group</label>
-                                <input type="text" class="form_input" id="b.group" name="b_group" placeholder="b.group"   required>
+                                    <label for="b.blood group" class="form_label">b.blood group</label>
+                                <input type="text" class="form_input" id="b.blood group" name="blood_group" placeholder="blood blood group"   required>
     
-                                <label for="rdt" class="form_label">rdt</label>
-                                <input type="text" class="form_input" id="rdt" placeholder="rdt" name="rdt" required>
+                                <label for="rapid diagnosis test" class="form_label">rapid diagnosis test</label>
+                                <input type="text" class="form_input" id="rapid diagnosis test" placeholder="rapid diagnosis test" name="rapid_diagnosis_test" required>
                                 </div>
                             </div> 
 
                             <div class="form_group">
-                                <label for="wbc" class="form_label">wbc</label>
-                                <input type="text" class="form_input" id="wbc" placeholder="wbc" name="wbc" required>
+                                <label for="white_blood_cell" class="form_label">grouping white blood cell count</label>
+                                <input type="text" class="form_input" id="white_blood_cell" placeholder="grouping white blood cell count" name="white_blood_cell" required>
                             </div>
                                 
                             
@@ -815,7 +815,7 @@
 
                                 <input type="text" class="form_input" id="name" name="tittle" placeholder="enter image tittle" required>
 
-                                <input type="file" name="image">
+                                <input class="form_input" type="file" name="image">
                             </div>
                           </div>
 
