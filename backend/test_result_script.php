@@ -1,7 +1,7 @@
 <?php
 
-    //database connection
-    $db = mysqli_select_db($con,'nesthet');
+   //database connection
+   $db = mysqli_select_db($con,'nesthet');
 
     if(isset($_POST['insert']))
     {
@@ -93,8 +93,6 @@
          {
             echo "<script> alert ('Record Failed to inserted please try again') </script>";
          }
-
-
     }
 
 ?>

@@ -15,7 +15,7 @@
         </div>
   
         <div class="header__nav">
-          <a href="test_result.php" class="header__nav--item">test result</a>
+          <a href="#" class="header__nav--item">test result</a>
   
           <a href="user_login.php" class="header__nav--item">user login</a>
         </div>

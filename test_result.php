@@ -12,10 +12,6 @@
     <link rel="stylesheet" href="sass/main.css">
 </head>
 <body>
-
-<?php
-    include "./backend/security.php";
-?>
     <div class="test_result">
         <div class="test_result-sub">
             <div class="test_result-header">

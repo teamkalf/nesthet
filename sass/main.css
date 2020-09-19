@@ -872,6 +872,58 @@ body {
   margin-top: .6rem;
 }
 
+.admin_container {
+  margin: 1rem;
+}
+
+.admin_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333;
+  padding: 1rem .5rem;
+}
+
+.admin_header_name_style {
+  color: #fff;
+}
+
+.admin_header_name_span {
+  color: darkred;
+}
+
+.admin_header_container {
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.admin_header_container-btn {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 0 .5rem;
+}
+
+.sidebar {
+  background-color: #777;
+  height: 100vh;
+  width: 20rem;
+  padding-top: 5rem;
+}
+
+.sidebar_anchor {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2rem 4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
 .main_page {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(./images/bg.jpg);
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./images/bg.jpg);
