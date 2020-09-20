@@ -1,4 +1,5 @@
 <?php
+    include 'server-connection.php';
 
    //database connection
    $db = mysqli_select_db($con,'nesthet');
@@ -43,10 +44,8 @@
         $image_tittle = $_POST['image_tittle'];
         
         //image insertion
-        $picture_name = random(1000,10000)."-".$_FILES["image"]["name"];
-        $temporary_name = $_FILES["files"]["tmp_name"];
-        $upload_directory ='./uploaded_files';
-        move_uploaded_file($temporary_name, $upload_directory.'/'.$picture_name);
+        $picture_name = $_FILES['image']['name'];
+        $upload = "uploaded_files/".$picture_name;
 
         // tests and test results
         $first_test = $_POST['first_test'];
@@ -56,8 +55,20 @@
         $third_test = $_POST['third_test'];
         $t_test_result = $_POST['t_test_result'];
 
-        //sql injection security
+        
 
+        //sql injection security using prepared statement
+        $query = "INSERT into tbl_test_result(name , telephone , blood_pressure , temperature , heart_rate , respiratory_rate , oxygen_saturation , general_condition , optional_disease , jaundice , edema , random_blood_sugar , fast_blood_sugar , hemoglobin , blood_group , rapid_diagnosis_test , white_blood_cell , image_tittle , picture_name , first_test , f_test_result , second_test , s_test_result , third_test , t_test_result)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $stmt = $con->prepare($query);
+        $stmt->bind_param("sssssssssssssssssssssssss",$name , $telephone , $blood_pressure , $temperature , $heart_rate , $respiratory_rate , $oxygen_saturation , $general_condition , $optional_disease , $jaundice , $edema , $random_blood_sugar , $fast_blood_sugar , $hemoglobin , $blood_group , $rapid_diagnosis_test , $white_blood_cell , $image_tittle , $upload , $first_test , $f_test_result , $second_test , $s_test_result , $third_test , $t_test_result);
+        $stmt->execute();
+
+
+
+
+
+
+        /*
         $name = mysqli_real_escape_string($con , $name);
         $telephone = mysqli_real_escape_string($con , $telephone);
         $blood_pressure = mysqli_real_escape_string($con , $blood_pressure);
@@ -93,6 +104,7 @@
          {
             echo "<script> alert ('Record Failed to inserted please try again') </script>";
          }
+         */
     }
 
 ?>

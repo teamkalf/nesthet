@@ -7,10 +7,12 @@
     align-items: center;
     background-color: $secondary_text-color;
     padding: 1rem .5rem;
+    
 
     &_name{
         &_style{
             color: $primary_color;
+            text-transform: uppercase;
         }
 
         &_span{
