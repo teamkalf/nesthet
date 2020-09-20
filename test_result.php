@@ -88,14 +88,14 @@
 
                     <div class="form_optional_disease">
                         <label class="form_label" for="pale" class="exam_type--label">pale:</label>
-                        <input type="checkbox" class="checkbox" name="optional_disease[]" id="pale">
+                        <input type="checkbox" class="checkbox" name="optional_disease[]" id="pale" value="pale">
 
                         <label class="form_label" for="cyanosis" class="exam_type--label">cyanosis:</label>
-                        <input type="checkbox" class="checkbox" name="optional_disease[]" id="cyanosis">
+                        <input type="checkbox" class="checkbox" name="optional_disease[]" id="cyanosis" value="cyanosis">
 
                         <label class="form_label" for="dehydration" class="exam_type--label">dehydration:</label>
 
-                        <input type="checkbox" class="checkbox" name="optional_disease[]" id="dehydration">
+                        <input type="checkbox" class="checkbox" name="optional_disease[]" id="dehydration" value="dehydration">
                     </div>
 
                     <div class="form_jaundice_main">

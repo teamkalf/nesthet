@@ -2,6 +2,7 @@
     include 'server-connection.php';
 
    //database connection
+
    $db = mysqli_select_db($con,'nesthet');
 
     if(isset($_POST['insert']))
@@ -56,55 +57,25 @@
         $t_test_result = $_POST['t_test_result'];
 
         
-
+        
         //sql injection security using prepared statement
-        $query = "INSERT into tbl_test_result(name , telephone , blood_pressure , temperature , heart_rate , respiratory_rate , oxygen_saturation , general_condition , optional_disease , jaundice , edema , random_blood_sugar , fast_blood_sugar , hemoglobin , blood_group , rapid_diagnosis_test , white_blood_cell , image_tittle , picture_name , first_test , f_test_result , second_test , s_test_result , third_test , t_test_result)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        $stmt = $con->prepare($query);
+        $insert_query = "INSERT into tbl_test_result (name , telephone , blood_pressure , temperature , heart_rate , respiratory_rate , oxygen_saturation , general_condition , optional_disease , jaundice , edema , random_blood_sugar, fast_blood_sugar , hemoglobin , blood_group , rapid_diagnosis_test , white_blood_cell , image_tittle , image , first_test , f_test_result , second_test , s_test_result ,third_test , t_test_result)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+        $stmt = $con->prepare($insert_query);
+
+        if(!$stmt){
+            //manage error
+            echo "error in your query" ;
+            exit;
+        }
         $stmt->bind_param("sssssssssssssssssssssssss",$name , $telephone , $blood_pressure , $temperature , $heart_rate , $respiratory_rate , $oxygen_saturation , $general_condition , $optional_disease , $jaundice , $edema , $random_blood_sugar , $fast_blood_sugar , $hemoglobin , $blood_group , $rapid_diagnosis_test , $white_blood_cell , $image_tittle , $upload , $first_test , $f_test_result , $second_test , $s_test_result , $third_test , $t_test_result);
+
         $stmt->execute();
 
+        move_uploaded_file($_FILES['image']['tmp_name'],$upload);
 
-
-
-
-
-        /*
-        $name = mysqli_real_escape_string($con , $name);
-        $telephone = mysqli_real_escape_string($con , $telephone);
-        $blood_pressure = mysqli_real_escape_string($con , $blood_pressure);
-        $temperature = mysqli_real_escape_string($con , $temperature);
-        $heart_rate = mysqli_real_escape_string($con , $heart_rate);
-        $respiratory_rate = mysqli_real_escape_string($con , $respiratory_rate);
-        $oxygen_saturation = mysqli_real_escape_string($con , $oxygen_saturation);
-        $random_blood_sugar = mysqli_real_escape_string($con , $random_blood_sugar);
-        $fast_blood_sugar = mysqli_real_escape_string($con , $fast_blood_sugar);
-        $hemoglobin = mysqli_real_escape_string($con , $hemoglobin);
-        $blood_group = mysqli_real_escape_string($con , $blood_group);
-        $rapid_diagnosis_test = mysqli_real_escape_string($con , $rapid_diagnosis_test);
-        $white_blood_cell = mysqli_real_escape_string($con , $white_blood_cell);
-        $image_tittle = mysqli_real_escape_string($con , $image_tittle);
-        $first_test = mysqli_real_escape_string($con , $first_test);
-        $f_test_result = mysqli_real_escape_string($con , $f_test_result);
-        $second_test = mysqli_real_escape_string($con , $second_test);
-        $s_test_result = mysqli_real_escape_string($con , $s_test_result);
-        $third_test = mysqli_real_escape_string($con , $third_test);
-        $t_test_result = mysqli_real_escape_string($con , $t_test_result);
-
-        //mysql insert query
-
-        $insert_query = ("INSERT into tbl_test_result (name , telephone , blood_pressure , temperature , heart_rate , respiratory_rate , oxygen_saturation , general_condition , optional_disease , jaundice , edema , random_blood_sugar, fast_blood_sugar , hemoglobin , blood_group , rapid_diagnosis_test , white_blood_cell , image_tittle , image , first_test , f_test_result , second_test , s_test_result ,third_test , t_test_result) values ('$name' , '$telephone' , '$blood_pressure' , '$temperature' , '$heart_rate' , '$respiratory_rate' , '$oxygen_saturation' , '$general_condition' , '$optional_disease' , '$jaundice' , '$edema' , '$random_blood_sugar' , '$fast_blood_sugar' , '$hemoglobin' , '$blood_group' , '$rapid_diagnosis_test' , '$white_blood_cell' , '$image_tittle' , '$picture_name' , '$first_test' , '$f_test_result' , '$second_test' , '$s_test_result' , '$third_test' , '$t_test_result')");
-
-        //run sql query
-
-        if(mysqli_query($con , $insert_query))
-        {
-            echo "<script> alert ('Record inserted Successfully') </script>";
-        }
-        else
-         {
-            echo "<script> alert ('Record Failed to inserted please try again') </script>";
-         }
-         */
+        echo "<script> alert ('Record inserted Successfully') </script>";
+        
     }
 
 ?>
