@@ -1,83 +1,79 @@
 <?php
+    include 'server-connection.php';
 
-    //database connection
-    $db = mysqli_select_db($con,'nesthet');
+   //database connection
+
+   $db = mysqli_select_db($con,'nesthet');
 
     if(isset($_POST['insert']))
-    {   
+    {
+        //declaration of variables
+
         //personal data
-        $name = $_POST['name'];
-        $gender = $_POST['gender'];
-        $date = $_POST['date'];
-        $reg_nurse = $_POST['reg_nurse'];
-        $current_complain = $_POST['current_complain'];
+                $name = $_POST['name'];
+                $gender = $_POST['gender'];
+                $date = $_POST['date'];
+                $reg_nurse = $_POST['reg_nurse'];
+                $current_complain = $_POST['current_complain'];
+        //vital section
+                $blood_pressure = $_POST['blood_pressure'];
+                $temperature = $_POST['temperature'];
+                $heart_rate = $_POST['heart_rate'];
+                $respiratory_rate = $_POST['respiratory_rate'];
+                $oxygen_saturation = $_POST['oxygen_saturation'];
+        //examination section
+                $general_condition = $_POST['general_condition'];
+                //checkbox data capture
+                $option = $_POST['optional_disease'];
+                $optional_disease = implode (',',$option);
 
-        // vital
-        $blood_pressure = $_POST['blood_pressure'];
-        $temperature = $_POST['temperature'];
-        $heart_rate = $_POST['heart_rate'];
-        $respiratory_rate = $_POST['respiratory_rate'];
-        $oxygen_saturation = $_POST['oxygen_saturation'];
-
-        // examination
-        $illness = $_POST['illness'];
-
-        $opt = $_POST['optional'];
-        $optional = implode (',',$opt);
-
-        $jaundice = $_POST['jaundice'];
-        $edema = $_POST['edema'];
-
-        // human system
-        $respiratory = $_POST['respiratory_system'];
-        $cardiovascular = $_POST['cardiovascular_system'];
-        $nervous = $_POST['internal_nervous_system'];
-        $gastro = $_POST['gastro_intestinal_system'];
-        $differential = $_POST['differential_diagnosis'];
-        $final = $_POST['final_diagnosis'];
-        $treatment = $_POST['treatment'];
-        $health_education = $_POST['health_education'];
-
+                $jaundice = $_POST['jaundice'];
+                $edema = $_POST['edema'];
+                $respiratory_system = $_POST['respiratory_system'];
+                $cardiovascular_system = $_POST['cardiovascular_system'];
+                $internal_nervous_system = $_POST['internal_nervous_system'];
+                $gastro_intestinal_system = $_POST['gastro_intestinal_system'];
+                $differential_diagnosis = $_POST['differential_diagnosis'];
+                $final_diagnosis = $_POST['final_diagnosis'];
+                $treatment = $_POST['treatment'];
+                $health_education = $_POST['health_education'];
         //routine lab test
-        $rbs = $_POST['rbs'];
-        $fbs = $_POST['fbs'];
-        $hb = $_POST['hb'];
-        $blood_group = $_POST['b_group'];
-        $rdt = $_POST['rdt'];
-        $wbc = $_POST['wbc'];
+                $random_blood_sugar = $_POST['random_blood_sugar'];
+                $fast_blood_sugar = $_POST['fast_blood_sugar'];
+                $hemoglobin = $_POST['hemoglobin'];
+                $blood_group = $_POST['blood_group'];
+                $rapid_diagnosis_test = $_POST['rapid_diagnosis_test'];
+                $white_blood_cell = $_POST['white_blood_cell'];
+                $urinalysis = $_POST['urinalysis'];
+        //investigation
+                $image_tittle = $_POST['image_tittle'];
+        //image insertion
+                $picture_name = $_FILES['image']['name'];
+                $upload = "uploaded_files/".$picture_name;
+        // tests and test results
+                $personnel_name = $_POST['personnel_name'];
+                $designation = $_POST['designation'];
+                $signature = $_POST['signature'];
 
-        //urinalysis
-        $urine = $_POST['urine'];
+        //prepare statement
 
-        // image upload codes
-        $tittle = $_POST['tittle'];
-        $img = $_FILES['image']['name'];
+        $insert_query = "INSERT INTO tbl_nursing_assessment(name,gender,date,reg_nurse,current_complain,blood_pressure,temperature,heart_rate,respiratory_rate,oxygen_saturation,general_condition,optional_disease,jaundice,edema,respiratory_system,cardiovascular_system,internal_nervous_system,gastro_intestinal_system,differential_diagnosis,final_diagnosis,treatment,health_education,random_blood_sugar,fast_blood_sugar,hemoglobin,blood_group,rapid_diagnosis_test,white_blood_cell,urinalysis,image_tittle,image,personnel_name,designation,signature)VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-        // complete by
+        $stmt = $con->prepare($insert_query);
 
-        $personnel_name = $_POST['personnel_name'];
-        $designation = $_POST['designation'];
-        $signature = $_POST['signature'];
+        if(!$stmt){
+            //manage error
+            echo "error in your query" ;
+            exit;
+        }
 
-        //sql injection security
-        $name = mysqli_real_escape_string($con,$name);
+        $stmt->bind_param("ssssssssssssssssssssssssssssssssss",$name,$gender,$date,$reg_nurse,$current_complain,$blood_pressure,$temperature,$heart_rate,$respiratory_rate,$oxygen_saturation,$general_condition,$optional_disease,$jaundice,$edema,$respiratory_system,$cardiovascular_system,$internal_nervous_system,$gastro_intestinal_system,$differential_diagnosis,$final_diagnosis,$treatment,$health_education,$random_blood_sugar,$fast_blood_sugar,$hemoglobin,$blood_group,$rapid_diagnosis_test,$white_blood_cell,$urinalysis,$image_tittle,$upload,$personnel_name,$designation,$signature);
 
-         //sql insert query
+        $stmt->execute();
 
-         $insert_query = ("INSERT into tbl_nursing_assessment (name , gender , date , reg_nurse , current_complain , bp , temp , pr , rr , 02_sat , illness , optional , jaundice , edema , respiratory_system , cardiovascular_system , internal_nervous_system , gastro_intestinal_system , differential_diagnosis , final_diagnosis , treatment , health_education , rbs , fbs , hb , b_group , rdt , wbc , urine , tittle , image , personnel_name , designation , signature)
-         VALUES ('$name' , '$gender' , '$date' , '$reg_nurse' , '$current_complain' , '$blood_pressure ' , '$temp ' , '$pr' , '$rr' , '$sat_02' , '$illness' , '$optional' , '$jaundice' , '$edema' , '$respiratory' , '$cardiovascular' , '$nervous' , '$gastro' , '$differential' , '$final' , '$treatment' , '$health_education ' , '$rbs' , '$fbs' , '$hb' , '$blood_group' , '$rdt' , '$wbc' , '$urine' , '$tittle' , '$img' , '$personnel_name' , '$designation' , '$signature')");
- 
-         //run sql insert query
- 
-         if(mysqli_query($con,$insert_query))
-         {
-             echo "<script> alert ('Record inserted Successfully') </script>";
-         }
-         else
-         {
-            echo "<script> alert ('Record Failed to inserted please try again') </script>";
-         }
+        move_uploaded_file($_FILES['image']['tmp_name'],$upload);
+
+        echo "<script> alert ('Record inserted and file uploaded Successfully')</script>";
     }
-    //move_uploaded_file($_FILES['image']['tmp_name'], "uploaded_files/$img");
 
 ?>

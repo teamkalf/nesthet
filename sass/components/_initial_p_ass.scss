@@ -1,0 +1,97 @@
+.assessment{
+    
+    &_header{
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: .5rem;
+    }
+    
+    .form{
+        text-align: left;
+        text-transform: uppercase;
+
+        &_language{
+            display: flex;
+        }
+
+        &_hospitalization{
+            display: flex;
+        }
+
+        &_neurological_header{
+            text-align: center;
+        }
+
+        &_neurological-sub{
+            display: flex;
+        }
+
+        &_neurological_perception{
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        &_neurological_migraine{
+            display: flex;
+        }
+
+        &_neurological_history{
+            width: 50%;
+        }
+
+        &_neurological_assessment{
+            width: 50%;
+        }
+
+        &_respiratory_header{
+            text-align: center;
+        }
+        &_respiratory_sub{
+            display: flex;
+
+            &-history{
+                width: 50%;
+            }
+
+            &-history-flex{
+                display: flex;
+                margin-bottom: .5rem;
+            }
+
+            &-assessment{
+                width: 50%;
+
+                &-breathing{
+                    margin-bottom: .5rem;
+                }
+            }
+
+            &-assessment-flex{
+                display: flex;
+                margin-bottom: .5rem;
+            }
+        }
+        &_cardiovascular{
+            &_header{
+                text-align: center;
+            }
+
+            &_sub{
+                display: flex;
+
+                &_history{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+                &_assessment{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}

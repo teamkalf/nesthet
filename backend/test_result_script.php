@@ -74,7 +74,7 @@
 
         move_uploaded_file($_FILES['image']['tmp_name'],$upload);
 
-        echo "<script> alert ('Record inserted Successfully') </script>";
+        echo "<script> alert ('Record inserted and file uploaded Successfully')</script>";
         
     }
 

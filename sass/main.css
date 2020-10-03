@@ -925,6 +925,126 @@ body {
   color: #fff;
 }
 
+.assessment_header {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: .5rem;
+}
+
+.assessment .form {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.assessment .form_language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_hospitalization {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_neurological_header {
+  text-align: center;
+}
+
+.assessment .form_neurological-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_neurological_perception {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.assessment .form_neurological_migraine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_neurological_history {
+  width: 50%;
+}
+
+.assessment .form_neurological_assessment {
+  width: 50%;
+}
+
+.assessment .form_respiratory_header {
+  text-align: center;
+}
+
+.assessment .form_respiratory_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_respiratory_sub-history {
+  width: 50%;
+}
+
+.assessment .form_respiratory_sub-history-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .5rem;
+}
+
+.assessment .form_respiratory_sub-assessment {
+  width: 50%;
+}
+
+.assessment .form_respiratory_sub-assessment-breathing {
+  margin-bottom: .5rem;
+}
+
+.assessment .form_respiratory_sub-assessment-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .5rem;
+}
+
+.assessment .form_cardiovascular_header {
+  text-align: center;
+}
+
+.assessment .form_cardiovascular_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_cardiovascular_sub_history {
+  width: 50%;
+}
+
+.assessment .form_cardiovascular_sub_history-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_cardiovascular_sub_assessment {
+  width: 50%;
+}
+
+.assessment .form_cardiovascular_sub_assessment-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main_page {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(./images/bg.jpg);
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./images/bg.jpg);
