@@ -28,6 +28,7 @@
 
         <div class="sidebar">
             <a href="#" class="sidebar_anchor"><i class="fal fa-table"></i>new user</a>
+            <a href="new_employee.php" class="sidebar_anchor">new employee</a>
             <a href="#" class="sidebar_anchor">forms</a>
             <a href="#" class="sidebar_anchor">tables</a>
             <a href="#" class="sidebar_anchor">new user</a>

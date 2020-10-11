@@ -936,16 +936,8 @@ body {
   text-transform: uppercase;
 }
 
-.assessment .form_language {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .assessment .form_hospitalization {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 .assessment .form_neurological_header {
@@ -1043,6 +1035,182 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.assessment .form_musculoskeletal_header {
+  text-align: center;
+}
+
+.assessment .form_musculoskeletal_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_musculoskeletal_sub_history {
+  width: 50%;
+}
+
+.assessment .form_musculoskeletal_sub_history-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_musculoskeletal_sub_assessment {
+  width: 50%;
+}
+
+.assessment .form_musculoskeletal_sub_assessment-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_musculoskeletal_sub_assessment_ADL-margin-top {
+  margin-top: .5rem;
+}
+
+.assessment .form_genitourinary_header {
+  text-align: center;
+}
+
+.assessment .form_genitourinary_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_genitourinary_sub_history {
+  width: 50%;
+}
+
+.assessment .form_genitourinary_sub_history-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_genitourinary_sub_assessment {
+  width: 50%;
+}
+
+.assessment .form_genitourinary_sub_assessment-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_skin_header {
+  text-align: center;
+}
+
+.assessment .form_skin_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_skin_sub_history {
+  width: 50%;
+}
+
+.assessment .form_skin_sub_history-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_skin_sub_assessment {
+  width: 50%;
+}
+
+.assessment .form_skin_sub_assessment-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_gastrointestinal_header {
+  text-align: center;
+}
+
+.assessment .form_gastrointestinal_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_gastrointestinal_sub_history {
+  width: 50%;
+}
+
+.assessment .form_gastrointestinal_sub_history-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_gastrointestinal_sub_assessment {
+  width: 50%;
+}
+
+.assessment .form_gastrointestinal_sub_assessment-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_psychosocial_header {
+  text-align: center;
+}
+
+.assessment .form_psychosocial_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_psychosocial_sub_history {
+  width: 50%;
+}
+
+.assessment .form_psychosocial_sub_history-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_psychosocial_sub_history-underline {
+  border-bottom: 2px solid #333;
+}
+
+.assessment .form_psychosocial_sub_assessment {
+  width: 50%;
+}
+
+.assessment .form_psychosocial_sub_assessment-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assessment .form_defence_mechanism_header {
+  text-align: center;
+}
+
+.assessment .form_pain_assessment_header {
+  text-align: center;
+}
+
+.assessment .form_psychosocial_support_header {
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  .from_neurological-block {
+    display: block;
+  }
 }
 
 .main_page {

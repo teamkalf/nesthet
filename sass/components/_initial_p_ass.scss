@@ -10,12 +10,8 @@
         text-align: left;
         text-transform: uppercase;
 
-        &_language{
-            display: flex;
-        }
-
         &_hospitalization{
-            display: flex;
+            display: block;
         }
 
         &_neurological_header{
@@ -25,7 +21,6 @@
         &_neurological-sub{
             display: flex;
         }
-
         &_neurological_perception{
             display: flex;
             margin-bottom: 1rem;
@@ -93,5 +88,143 @@
                 }
             }
         }
+        &_musculoskeletal{
+            &_header{
+                text-align: center;
+            }
+
+            &_sub{
+                display: flex;
+
+                &_history{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+                &_assessment{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                    &_ADL-margin-top{
+                        margin-top: .5rem;
+                    }
+                }
+            }
+        }
+        &_genitourinary{
+            &_header{
+                text-align: center;
+            }
+
+            &_sub{
+                display: flex;
+
+                &_history{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+                &_assessment{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+            }
+        }
+        &_skin{
+            &_header{
+                text-align: center;
+            }
+
+            &_sub{
+                display: flex;
+
+                &_history{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+                &_assessment{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+            }
+        }
+        &_gastrointestinal{
+            &_header{
+                text-align: center;
+            }
+
+            &_sub{
+                display: flex;
+
+                &_history{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+                &_assessment{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+            }
+        }
+        &_psychosocial{
+            &_header{
+                text-align: center;
+            }
+
+            &_sub{
+                display: flex;
+
+                &_history{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                    &-underline{
+                        border-bottom: 2px solid $secondary_text-color  ;
+                    }
+                }
+                &_assessment{
+                    width: 50%;
+                    &-flex{
+                        display: flex;
+                    }
+                }
+            }
+        }
+        &_defence_mechanism{
+            &_header{
+                text-align: center;
+            }
+        }
+        &_pain_assessment{
+            &_header{
+                text-align: center;
+            }
+        }
+        &_psychosocial_support{
+            &_header{
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@media(max-width:990px){
+    .from_neurological-block{
+        display: block;
     }
 }
