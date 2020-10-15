@@ -1,0 +1,23 @@
+.form{
+    text-align: left;
+    &_employee_header{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &_personal_detail{
+        text-transform: uppercase;
+    }
+    &_group-flex{
+        display: flex;
+        align-items: center;
+        &-input{
+            margin-left: 1rem;
+        }
+    }
+    &_contact_detail-header{
+        text-transform: uppercase;
+    }
+    &_educational_background{
+        text-transform: uppercase;
+    }
+}
