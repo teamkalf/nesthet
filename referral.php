@@ -68,10 +68,10 @@
 
                         <div class="form_group">
                             <label for="date" class="form_label">Date of Referral</label>
-                            <input type="text" class="form_input" id="date" name="referral_date" name="referred_date"  placeholder="referral date"   required>
+                            <input type="text" class="form_input" id="date" name="referral_date" name="referred_date"  placeholder="YY-MM-DD"   required>
               
                             <label for="time" class="form_label">Time</label>
-                            <input type="text" class="form_input" id="time" name="referral_time"  placeholder="time"   required>
+                            <input type="text" class="form_input" id="time" name="referral_time"  placeholder="HH:MM:ss"   required>
                         </div>
 
                         <div class="form_group">

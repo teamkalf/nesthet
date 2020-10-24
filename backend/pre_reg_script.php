@@ -28,42 +28,17 @@
         $medication = $_POST['medication'];
 
         //sql injection security
-
-        $name = mysqli_real_escape_string($con,$name);
-        $age = mysqli_real_escape_string($con,$age);
-        $occupation = mysqli_real_escape_string($con,$occupation);
-        $organization = mysqli_real_escape_string($con,$organization);
-        $designation = mysqli_real_escape_string($con,$designation);
-        $marital_status = mysqli_real_escape_string($con,$marital_status);
-        $telephone = mysqli_real_escape_string($con,$telephone);
-        $address = mysqli_real_escape_string($con,$address);
-        $compound_name = mysqli_real_escape_string($con,$compound_name);
-        $compound_head = mysqli_real_escape_string($con,$compound_head);
-        $compound_head_phone = mysqli_real_escape_string($con,$compound_head_phone);
-        $email = mysqli_real_escape_string($con,$email);
-        $nextOf_kin = mysqli_real_escape_string($con,$nextOf_kin);
-        $relationship = mysqli_real_escape_string($con,$relationship);
-        $contact_person = mysqli_real_escape_string($con,$contact_person);
-        $contact_person_phone = mysqli_real_escape_string($con,$contact_person_phone);
-        $nearest_landmark = mysqli_real_escape_string($con,$nearest_landmark);
-        $existing_disease = mysqli_real_escape_string($con,$existing_disease);
-        $medication = mysqli_real_escape_string($con,$medication);
-
-        //sql insert query
-
-        $insert_query = ("INSERT into tbl_pre_registration (name , age , occupation , organization , designation , marital_status , telephone , address , compound_name , compound_head , compound_head_phone , email , nextOf_kin , relationship , contact_person , contact_person_phone , nearest_landmark , existing_disease , medication)
-        VALUES ('$name' , '$age' , '$occupation' , '$organization' , '$designation' , '$marital_status' , '$telephone' , '$address' , '$compound_name' , '$compound_head' , '$compound_head_phone' , '$email' , '$nextOf_kin' , '$relationship' , '$contact_person' , '$contact_person_phone' , '$nearest_landmark' , '$existing_disease' , '$medication')");
-
-        //run sql insert query
-
-        if(mysqli_query($con,$insert_query))
-        {
-            echo "<script> alert ('Record inserted Successfully') </script>";
+        //prepare statement
+        $insert_query = "INSERT into tbl_pre_registration(name , age , occupation , organization , designation , marital_status , telephone , address , compound_name , compound_head , compound_head_phone , email , nextOf_kin , relationship , contact_person , contact_person_phone , nearest_landmark , existing_disease , medication)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $stmt=$con->prepare($insert_query);
+        //error management
+        if(!$stmt){
+            echo "error in your query";
+            exit;
         }
-        else
-        {
-           echo "<script> alert ('Record Failed to inserted please try again') </script>";
-        }
+        $stmt->bind_param("sssssssssssssssssss",$name , $age , $occupation , $organization , $designation , $marital_status , $telephone , $address , $compound_name , $compound_head , $compound_head_phone , $email , $nextOf_kin , $relationship , $contact_person , $contact_person_phone , $nearest_landmark , $existing_disease , $medication);
+        $stmt->execute();
+        echo "<script> alert ('Record inserted Successfully') </script>";
     }
 
 ?>

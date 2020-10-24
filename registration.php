@@ -38,7 +38,7 @@
               <input type="text" class="form_input" id="Sex" placeholder="gender"  name="gender"  required>
 
               <label for="Date" class="form_label">Date</label>
-              <input type="text" class="form_input" id="Date" placeholder="date" name="date"   required>
+              <input type="text" class="form_input" id="Date" placeholder="YY-MM-DD" name="date"   required>
             </div>
 
             <div class="form_group">

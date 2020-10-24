@@ -25,15 +25,19 @@
                 <a href="test_result.php" class="admin_header_container-btn">test result</a>
             </div>
         </header>
-
         <div class="sidebar">
-            <a href="#" class="sidebar_anchor"><i class="fal fa-table"></i>new user</a>
-            <a href="new_employee.php" class="sidebar_anchor">new employee</a>
-            <a href="#" class="sidebar_anchor">forms</a>
-            <a href="#" class="sidebar_anchor">tables</a>
+            <div class="sidebar-header u-margin-bottom-small">
+                <h3 class="sidebar-header">my applications</h3>
+            </div>
+            <a href="index.php" class="sidebar_anchor">home</a>
             <a href="#" class="sidebar_anchor">new user</a>
-            <a href="#" class="sidebar_anchor">forms</a>
-            <a href="#" class="sidebar_anchor">tables</a>
+            <a href="#" class="sidebar_anchor">users</a>
+            <a href="new_employee.php" class="sidebar_anchor">new employee</a>
+            <a href="#" class="sidebar_anchor">employee</a>
+            <a href="mdi_parent.php" class="sidebar_anchor">forms</a>
+            <div class="table-menu">
+                <button class="button-menu">tables</button>
+            </div>
         </div>
     </div>
 </body>

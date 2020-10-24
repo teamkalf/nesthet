@@ -1,8 +1,6 @@
 <?php
-
     //database connection
     $db = mysqli_select_db($con,'nesthet');
-
     if(isset($_POST['insert']))
     {
         $name = $_POST['name'];
@@ -28,22 +26,16 @@
         $designation = $_POST['designation'];
         $department = $_POST['department'];
         $signature = $_POST['signature'];
-
-        //sql insert query
-
-        $insert_query = ("INSERT into tbl_registration (name , gender , date , age , reg_nurse , address , occupation , region , district , No_of_kids , No_of_wives , email , telephone , nextOf_kin , relationship , nextOf_kin_address , medical_history , surgical_history , family_history , personnel_name , designation , department , signature)
-        VALUES ('$name' , '$gender' , '$date' , '$age' , '$reg_nurse' , '$address' , '$occupation' , '$region' , '$district' , '$No_ofKids' , '$No_ofWives' , '$email' , '$telephone' , '$nextOf_kin' , '$relationship' , '$nextOf_kin_address' , '$medical_history' , '$surgical_history' , '$family_history' , '$personnel_name' , '$designation' , '$department' , '$signature')");
-
-        //run sql insert query
-
-        if(mysqli_query($con,$insert_query))
-        {
-            echo "<script> alert ('Record inserted Successfully') </script>";
-        }
-        else
-        {
-            echo "<script> alert ('Record Failed to inserted please try again') </script>";
-        }
+        //prepare statement
+       $insert_query = "INSERT INTO tbl_registration (name , gender , date , age , reg_nurse , address , occupation , region , district , No_of_kids , No_of_wives , email , telephone , nextOf_kin , relationship , nextOf_kin_address , medical_history , surgical_history , family_history , personnel_name , designation , department , signature)VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+       $stmt=$con->prepare($insert_query);
+        if(!$stmt){
+           //manage error
+           echo "error in your query" ;
+           exit;
+       }
+       $stmt->bind_param("sssssssssssssssssssssss",$name , $gender , $date , $age , $reg_nurse , $address , $occupation , $region , $district , $No_ofKids , $No_ofWives , $email , $telephone , $nextOf_kin , $relationship , $nextOf_kin_address , $medical_history , $surgical_history , $family_history , $personnel_name , $designation , $department , $signature);
+       $stmt->execute();
+       echo "<script> alert ('Record inserted Successfully')</script>";
     }
-
 ?>

@@ -38,15 +38,23 @@
     background-color: $secondary_text-color-light;
     height: 100vh;
     width: 20rem;
-    padding-top: 5rem;
+    padding-top: 3rem;
+    &-header{
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid;
+    }
 
     &_anchor{
         display: block;
         text-decoration: none;
-        text-transform: uppercase;
-        padding: 2rem 4rem;
-        font-weight: 700;
-        color: $primary_color;
-
+        text-transform: capitalize;
+        padding: .6rem 3rem;
+        font-weight: 400;
+        color: $secondary_text-color;
+        &:hover{
+            background-color: $secondary_text-color;
+            color: $primary_color;
+        }
     }
 }

@@ -20,11 +20,11 @@
        //prepare statement
        $insert_query = "INSERT INTO tbl_employee(name,address,birth,designation,gender,email,telephone,school_graduated,qualification_title,document)VALUES (?,?,?,?,?,?,?,?,?,?)";
        $stmt=$con->prepare($insert_query);
-      /* if(!$stmt){
+        if(!$stmt){
            //manage error
            echo "error in your query" ;
            exit;
-       }*/
+       }
        $stmt->bind_param("ssssssssss",$name,$address,$birth,$designation,$gender,$email,$telephone,$school_graduated,$qualification_title,$upload);
        $stmt->execute();
        //move document to their permanent directory

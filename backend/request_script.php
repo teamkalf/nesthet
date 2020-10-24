@@ -16,22 +16,16 @@
         $complain = $_POST['complain'];
         $request = $_POST['request'];
         $signedBy = $_POST['signed_by'];
-
-        //sql insert query
-
-        $insert_query = ("INSERT into tbl_request (name , age , gender , address , date , time , complain , request , signed_by)
-        VALUES ('$name' , '$age' , '$gender' , '$address' , '$date' , '$time' , '$complain' , '$request' , '$signedBy')");
-
-        //run sql insert query
-
-        if(mysqli_query($con,$insert_query))
-        {
-            echo "<script> alert ('Record inserted Successfully') </script>";
-        }
-        else
-        {
-           echo "<script> alert ('Record Failed to inserted please try again') </script>";
-        }
+        //prepare statement
+       $insert_query = "INSERT INTO tbl_request (name , age , gender , address , date , time , complain , request , signed_by)VALUES (?,?,?,?,?,?,?,?,?)";
+       $stmt=$con->prepare($insert_query);
+        if(!$stmt){
+           //manage error
+           echo "error in your query" ;
+           exit;
+       }
+       $stmt->bind_param("sssssssss",$name , $age , $gender , $address , $date , $time , $complain , $request , $signedBy);
+       $stmt->execute();
+       echo "<script> alert ('Record inserted Successfully')</script>";
     }
-
 ?>

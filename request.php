@@ -46,7 +46,7 @@
                     <div class="form_group">
                         <label for="date" class="form_label">Date</label>
 
-                        <input type="text" id="date" name="date" class="form_input" placeholder="Enter Date" required>
+                        <input type="text" id="date" name="date" class="form_input" placeholder="YY-MM-DD" required>
     
                         <label for="time" class="form_label">Time</label>
 

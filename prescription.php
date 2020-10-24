@@ -3,7 +3,6 @@
     include "./backend/server-connection.php";
     include "./backend/prescription_script.php";
     include "./backend/security.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -58,13 +57,13 @@
                             Date
                         </label>
 
-                        <input type="text" class="form_input form_" id="date" name="date" placeholder="date" required> 
+                        <input type="text" class="form_input form_" id="date" name="date" placeholder="YY-MM-DD" required> 
 
                         <label for="time" class="form_label">
                             Time
                         </label>
 
-                        <input type="text" class="form_input " id="time" name="time" placeholder="time" required>
+                        <input type="text" class="form_input " id="time" name="time" placeholder="HH:MM:SS" required>
                         
                     </div>
 
