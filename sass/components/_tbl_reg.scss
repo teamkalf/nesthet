@@ -1,0 +1,58 @@
+.tbl_registration_main{
+    padding: 15px;
+    &_navbar{
+        display: flex;
+        background-color: $secondary_text-color;
+        padding: .5rem .2rem;
+        align-items: center;
+        &_search{
+            margin-left: auto;
+        }
+        &_search-nav{
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $primary_color;
+            padding: 0 .5rem;
+        }
+    }
+    &-logo{
+        color: $primary_color;
+        text-transform: capitalize;
+    }
+    &_header{
+        text-transform: capitalize;
+        text-align: center;
+        margin-top: 1rem;
+        padding-bottom: 2px;
+    }
+    &_table{
+        border-collapse: collapse;
+        padding: 2rem;
+    }
+    &-table_head{
+        border: 1px solid #ddd;
+        padding: .6rem 2.5rem;
+        text-transform: capitalize;
+        background-color: lightblue;
+    }
+    &-table_data{
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: .5rem 0;
+    }
+    &_action-btn{
+        text-transform: capitalize;
+        text-decoration: none;
+        background-color: red;
+        border-radius: .5rem;
+        padding: .2rem;
+        text-align: center;
+        color: $primary_color;
+        &_light-blue{
+            background-color: lightblue;
+        }
+        &_red-orange{
+            background-color: lightgreen;
+        }
+    }
+}

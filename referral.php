@@ -3,6 +3,7 @@
     include "./backend/server-connection.php";
     include "./backend/referral_script.php";
     include "./backend/security.php";
+    include "./backend/action.php";
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@
 
                     <div class="form_group">
                         <label for="referred" class="form_label">Referred From</label>
-                        <input type="text" class="form_input" id="referred" name="referred_from" placeholder="referred from"   required>
+                        <input type="text" class="form_input" id="referred" name="referred_from" placeholder="referred from"  required>
           
                         <label for="to" class="form_label">To</label>
                         <input type="text" class="form_input" name="referred_to"  id="to" placeholder="to"   required>

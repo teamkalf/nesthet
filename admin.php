@@ -37,6 +37,10 @@
             <a href="mdi_parent.php" class="sidebar_anchor">forms</a>
             <div class="table-menu">
                 <button class="button-menu">tables</button>
+                <div class="table-menu_anchor">
+                    <a href="tbl_registration.php" class="table-menu_anchor">registration table</a>
+                    <a href="tbl_referral.php" class="table-menu_anchor">referral table</a>
+                </div>
             </div>
         </div>
     </div>
