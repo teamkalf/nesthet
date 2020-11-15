@@ -27,7 +27,7 @@
         </header>
         <div class="sidebar">
             <div class="sidebar-header u-margin-bottom-small">
-                <h3 class="sidebar-header">my applications</h3>
+                <h3 class="sidebar-header">nesthet app</h3>
             </div>
             <a href="index.php" class="sidebar_anchor">home</a>
             <a href="#" class="sidebar_anchor">new user</a>
@@ -35,11 +35,11 @@
             <a href="new_employee.php" class="sidebar_anchor">new employee</a>
             <a href="#" class="sidebar_anchor">employee</a>
             <a href="mdi_parent.php" class="sidebar_anchor">forms</a>
-            <div class="table-menu">
-                <button class="button-menu">tables</button>
-                <div class="table-menu_anchor">
-                    <a href="tbl_registration.php" class="table-menu_anchor">registration table</a>
-                    <a href="tbl_referral.php" class="table-menu_anchor">referral table</a>
+            <div class="sidebar_table-menu">
+                <button class="sidebar_table-menu_button-menu">tables</button>
+                <div class="sidebar_table-menu_dropdown">
+                    <a href="tbl_registration.php" class="sidebar_table-menu_anchor">registration table</a>
+                    <a href="tbl_referral.php" class="sidebar_table-menu_anchor">referral table</a>
                 </div>
             </div>
         </div>

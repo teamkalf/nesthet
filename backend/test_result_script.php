@@ -1,8 +1,6 @@
 <?php
     include 'server-connection.php';
-
    //database connection
-
    $db = mysqli_select_db($con,'nesthet');
 
     if(isset($_POST['insert']))

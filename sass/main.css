@@ -1342,6 +1342,37 @@ body {
   background-color: lightgreen;
 }
 
+.tbl_registration_main-container_header {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tbl_registration_main-container-sub {
+  text-transform: uppercase;
+}
+
+.tbl_registration_main-container_record-detail-darkgray {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #777;
+  padding: .5rem 1rem;
+  margin-bottom: .3rem;
+  border-bottom: 2px solid #777;
+  border-radius: 10px;
+}
+
+.tbl_registration_main-container_record-detail-lightgray {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  background-color: #777;
+  font-weight: 300;
+  color: #fff;
+  padding: .5rem 1rem;
+  margin-bottom: .3rem;
+  border-radius: 10px;
+}
+
 .main_page {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(./images/bg.jpg);
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./images/bg.jpg);

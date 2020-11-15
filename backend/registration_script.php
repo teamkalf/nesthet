@@ -36,6 +36,7 @@
        }
        $stmt->bind_param("sssssssssssssssssssssss",$name , $gender , $date , $age , $reg_nurse , $address , $occupation , $region , $district , $No_ofKids , $No_ofWives , $email , $telephone , $nextOf_kin , $relationship , $nextOf_kin_address , $medical_history , $surgical_history , $family_history , $personnel_name , $designation , $department , $signature);
        $stmt->execute();
+       
        echo "<script> alert ('Record inserted Successfully')</script>";
     }
 ?>

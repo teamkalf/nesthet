@@ -70,7 +70,7 @@
               <label for="children" class="form_label">Number of children</label>
               <input type="text" class="form_input" id="children" placeholder="number of children" name="No_of_kids" value ="<?= $No_ofKids; ?>" required>
 
-              <label for="wives" class="form_label">number of wives</label>
+              <label for="wives" class="form_label">number of husband/wives</label>
               <input type="text" class="form_input" id="wives" placeholder="number of wives"  name="No_of_wives" value ="<?= $No_ofWives; ?>" required>
             </div>
           </div>
@@ -111,7 +111,7 @@
               </div>
 
               <div class="textarea">
-                <textarea  id="medical" cols="40" rows="10" placeholder="past medical history" class="textarea_adjust"  name="medical_history" value ="<?= $medical_history; ?>" ></textarea>
+                <textarea  id="medical" cols="40" rows="10" placeholder="past medical history" class="textarea_adjust"  name="medical_history"><?php echo htmlentities($medical_history);?></textarea>
               </div>
             </div>
 
@@ -121,7 +121,7 @@
               </div>
 
               <div class="textarea">
-                <textarea  id="surgical" cols="40" rows="10" placeholder="past surgical history" class="textarea_adjust" name="surgical_history" value ="<?= $surgical_history; ?>" ></textarea>
+                <textarea  id="surgical" cols="40" rows="10" placeholder="past surgical history" class="textarea_adjust" name="surgical_history"><?php echo htmlentities($surgical_history);?></textarea>
               </div>
             </div>
 
@@ -130,7 +130,7 @@
                 <label for="family" class="form_label">family history</label>
               </div>
               <div class="textarea">
-                <textarea  id="family" cols="40" rows="10" placeholder="Family history" class="textarea_adjust" name="family_history" value ="<?= $family_history; ?>" ></textarea>
+                <textarea  id="family" cols="40" rows="10" placeholder="Family history" class="textarea_adjust" name="family_history"><?php echo htmlentities($family_history);?></textarea>
               </div>
             </div>
           </div>
@@ -161,11 +161,11 @@
         </section>
 
         <div class="button_container">
-          <?php if($update==true){ ?>
-            <input type="submit" name="update" value="update record" class="submit_btn">
-          <?php } else{ ?>
-            <input type="submit" name="insert" value="enter record" class="submit_btn">
-          <?php } ?>
+        <?php if($update == true) {?>
+          <input type="submit" name="update" value="update record" class="submit_btn">
+        <?php } else{?>
+          <input type="submit" name="insert" value="enter record" class="submit_btn">
+        <?php }?>
         </div>
       </form>
     </div>

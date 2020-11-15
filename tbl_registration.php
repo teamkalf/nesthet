@@ -1,8 +1,10 @@
 <?php
-    include "./backend/action.php";
+    include "./backend/action.php";//action file
     include "./backend/server-connection.php";//server connection
     $db = mysqli_select_db($con,'nesthet');//database connection
+
     //displaying records query
+
     $query = "SELECT * FROM tbl_registration";
     $stmt=$con->prepare($query);
     $stmt->execute();
@@ -61,8 +63,7 @@
                     <th class="tbl_registration_main-table_head">action_performance</th>
                 </tr>
                 <?php
-                while($row = $result->fetch_assoc()){
-                ?>
+                while($row = $result->fetch_assoc()){?>
                     <tr>
                         <td class="tbl_registration_main-table_data"><?=$row['registration_No'];?></td>
                         <td class="tbl_registration_main-table_data"><?=$row['name'];?></td>
@@ -81,16 +82,19 @@
                         <td class="tbl_registration_main-table_data"><?=$row['nextOf_kin'];?></td>
                         <td class="tbl_registration_main-table_data"><?=$row['relationship'];?></td>
                         <td class="tbl_registration_main-table_data"><?=$row['nextOf_kin_address'];?></td>
-                        <td class="tbl_registration_main-table_data"><?=$row['medical_history'];?></td>
-                        <td class="tbl_registration_main-table_data"><?=$row['surgical_history'];?></td>
-                        <td class="tbl_registration_main-table_data"><?=$row['family_history'];?></td>
+                        <td ><textarea class="tbl_registration_main-table_data" name="medical_history" id="" cols="30" rows="2"><?=$row['medical_history'];?></textarea></td>
+                        <td ><textarea class="tbl_registration_main-table_data" name="surgical_history" id="" cols="30" rows="2"><?=$row['surgical_history'];?></textarea></td>
+                        <td ><textarea class="tbl_registration_main-table_data" name="family_history" id="" cols="30" rows="2"><?=$row['family_history'];?></textarea></td>
                         <td class="tbl_registration_main-table_data"><?=$row['personnel_name'];?></td>
                         <td class="tbl_registration_main-table_data"><?=$row['designation'];?></td>
                         <td class="tbl_registration_main-table_data"><?=$row['department'];?></td>
                         <td class="tbl_registration_main-table_data"><?=$row['signature'];?></td>
                         <td class="tbl_registration_main-table_data">
+
                             <a href="details.php?details=<?= $row['registration_No']; ?>" class="tbl_registration_main_action-btn tbl_registration_main_action-btn_light-blue ">Details</a> |
+                            
                             <a href="registration.php?edit=<?= $row['registration_No']; ?>" class="tbl_registration_main_action-btn tbl_registration_main_action-btn_red-orange">edit</a> |
+
                             <a href="./backend/action.php?delete=<?= $row['registration_No']; ?>" class="tbl_registration_main_action-btn" onclick="return confirm('Do you want to permanently delete this record?');">Delete</a>
                         </td>
                     </tr>

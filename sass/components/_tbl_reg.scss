@@ -55,4 +55,34 @@
             background-color: lightgreen;
         }
     }
+    //style code for the details page
+    &-container{
+        &_header{
+            text-transform: uppercase;
+            text-align: center;
+        }
+        &-sub{
+            text-transform: uppercase;
+        }
+        &_record-detail-darkgray{
+            text-transform: capitalize;
+            font-size: $default_font-size;
+            font-weight: 300;
+            color: $secondary_text-color-light;
+            padding: .5rem 1rem;
+            margin-bottom: .3rem;
+            border-bottom: 2px solid $secondary_text-color-light;
+            border-radius: 10px;
+        }
+        &_record-detail-lightgray{
+            text-transform: capitalize;
+            font-size: $default_font-size;
+            background-color: $secondary_text-color-light;
+            font-weight: 300;
+            color: $primary_color;
+            padding: .5rem 1rem;
+            margin-bottom: .3rem;
+            border-radius: 10px;
+        }
+    }
 }
